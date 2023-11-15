@@ -16,6 +16,9 @@ function App() {
       console.log("SEARCH FOR", keyword);
     }
   }, [keyword]);
+  useEffect(() => {
+    console.log("render(keyword || counter)");
+  }, [keyword, counter]);
   return (
     <div>
       <input
