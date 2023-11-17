@@ -27,8 +27,11 @@ function App() {
         <strong>Loding...</strong>
       ) : (
         <div>
-          <select value={selectCoin[0]} onChange={onChange}>
-            <option value="xx" disabled>
+          <select
+            value={`${selectCoin[0]} ${selectCoin[1]}`}
+            onChange={onChange}
+          >
+            <option value="xx null" disabled>
               Please Select a Coin
             </option>
             {coins.map((coin) => {
@@ -59,7 +62,7 @@ function App() {
               <div>
                 <label htmlFor="coin">{selectCoin[1]} </label>
                 <input
-                  value={amount / selectCoin[0]}
+                  value={(amount / selectCoin[0]).toFixed(10)}
                   disabled
                   id="coin"
                   placeholder="Coin"
