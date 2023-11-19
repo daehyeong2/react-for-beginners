@@ -22,7 +22,7 @@ function Movie({
       <img alt={title} src={medium_cover_image} />
       <h2 style={{ color: "white", backgroundColor: "rgba(0,0,0,0.2)" }}>
         <Link
-          to={`/movie/${id}`}
+          to={`movie/${id}`}
           style={{
             color: "white",
             textDecoration: "none",
@@ -47,7 +47,7 @@ function Movie({
         })}
       </div>
       <p style={{ color: "white", backgroundColor: "rgba(0,0,0,0.2)" }}>
-        {summary}
+        {summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}
       </p>
     </div>
   );

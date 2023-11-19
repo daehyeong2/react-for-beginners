@@ -40,7 +40,7 @@ function Detail() {
             }}
           >
             <a
-              href="/"
+              href="/react-for-beginners"
               style={{
                 display: "block",
                 color: "white",

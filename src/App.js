@@ -10,10 +10,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/movie/:id">
+        <Route path="/react-for-beginners/movie/:id">
           <Detail />
         </Route>
-        <Route path="/">
+        <Route path="/react-for-beginners">
           <Home />
         </Route>
       </Switch>
